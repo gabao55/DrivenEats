@@ -1,4 +1,9 @@
 function selectItem(item) {
+    if (item.classList.contains("selected")) {
+        item.classList.remove("selected");
+        return item.removeChild(item.querySelector("ion-icon"));
+    }
+
     let carousel = item.parentElement.querySelectorAll(".option");
     let child;
 
