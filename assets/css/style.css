@@ -44,7 +44,7 @@ hr {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 2;
+    z-index: 1;
 }
 
 .header h1 {
@@ -73,7 +73,7 @@ hr {
 
 .carousel {
     display: flex;
-    overflow-x: hidden;
+    overflow-x: scroll;
     width: 100%;
     margin-top: 17px;
 }
@@ -98,7 +98,6 @@ hr {
     position: absolute;
     bottom: 16px;
     right: 16px;
-    z-index: 1;
     color: #32B72F;
 }
 
@@ -133,7 +132,7 @@ hr {
     position: fixed;
     left: 0;
     bottom: 0;
-    z-index: 2;
+    z-index: 1;
 }
 
 .footer button {
@@ -146,4 +145,8 @@ hr {
     line-height: 23px;
     font-weight: 400;
     color: #FFFFFF;
+}
+
+::-webkit-scrollbar {
+    display: none;
 }
