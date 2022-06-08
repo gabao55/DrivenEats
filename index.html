@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/style.css">
-    <script src="assets/js/scripts.js"></script>
     <title>DrivenEats</title>
 </head>
 <body>
@@ -17,20 +16,20 @@
     <div class="main-course">
         <h2>Primeiro, seu prato</h2>
         <div class="carousel">
-            <div class="option selected">
+            <div class="option selected" onclick="selectItem(this);">
                 <img src="assets/img/frango_yin_yang 1.png" alt="Frango Yin Yang" />
                 <h3>Frango Yin Yang</h3>
                 <p>Um pouco de batata, um pouco de salada</p>
                 <span>R$14,90</span>
                 <ion-icon name="checkmark-circle"></ion-icon>
             </div>
-            <div class="option">
+            <div class="option" onclick="selectItem(this);">
                 <img src="assets/img/frango_yin_yang 1.png" alt="Frango Yin Yang" />
                 <h3>Frango Yin Yang</h3>
                 <p>Um pouco de batata, um pouco de salada</p>
                 <span>R$ 14,90</span>
             </div>
-            <div class="option">
+            <div class="option" onclick="selectItem(this);">
                 <img src="assets/img/frango_yin_yang 1.png" alt="Frango Yin Yang" />
                 <h3>Frango Yin Yang</h3>
                 <p>Um pouco de batata, um pouco de salada</p>
@@ -41,19 +40,19 @@
     <div class="drink">
         <h2>Agora, sua bebida</h2>
         <div class="carousel">
-            <div class="option">
+            <div class="option" onclick="selectItem(this);">
                 <img src="assets/img/coquinha_gelada 1.png" alt="Coquinha gelada" />
                 <h3>Coquinha gelada</h3>
                 <p>Lata 350mL</p>
                 <span>R$ 4,90</span>
             </div>
-            <div class="option">
+            <div class="option" onclick="selectItem(this);">
                 <img src="assets/img/coquinha_gelada 1.png" alt="Coquinha gelada" />
                 <h3>Coquinha gelada</h3>
                 <p>Lata 350mL</p>
                 <span>R$ 4,90</span>
             </div>
-            <div class="option">
+            <div class="option" onclick="selectItem(this);">
                 <img src="assets/img/coquinha_gelada 1.png" alt="Coquinha gelada" />
                 <h3>Coquinha gelada</h3>
                 <p>Lata 350mL</p>
@@ -64,19 +63,19 @@
     <div class="dessert">
         <h2>Por fim, sua sobremesa</h2>
         <div class="carousel">
-            <div class="option">
+            <div class="option" onclick="selectItem(this);">
                 <img src="assets/img/pudim 1.png" alt="Pudim" />
                 <h3>Pudim</h3>
                 <p>Apenas pudim</p>
                 <span>R$ 7,90</span>
             </div>
-            <div class="option">
+            <div class="option" onclick="selectItem(this);">
                 <img src="assets/img/pudim 1.png" alt="Pudim" />
                 <h3>Pudim</h3>
                 <p>Apenas pudim</p>
                 <span>R$ 7,90</span>
             </div>
-            <div class="option">
+            <div class="option" onclick="selectItem(this);">
                 <img src="assets/img/pudim 1.png" alt="Pudim" />
                 <h3>Pudim</h3>
                 <p>Apenas pudim</p>
@@ -88,6 +87,7 @@
         <button>Selecione os 3 itens <hr> para fechar o pedido</button>
     </div>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+    <script src="assets/js/scripts.js"></script>
 </body>
 </html>
