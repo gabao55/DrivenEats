@@ -83,7 +83,30 @@
         </div>
     </div>
     <div class="footer">
-        <button><p>Selecione os 3 itens <br /> para fechar o pedido</p></button>
+        <button onclick="showFinalPage();"><p>Selecione os 3 itens <br /> para fechar o pedido</p></button>
+    </div>
+    <div class="final-page">
+        <div>
+            <h4>Confirme seu pedido</h4>
+            <div>
+                <span>Frango Yin Yang</span>
+                <span>14,90</span>
+            </div>
+            <div>
+                <span>Coquinha gelada</span>
+                <span>4,90</span>
+            </div>
+            <div>
+                <span>Pudim</span>
+                <span>7,90</span>
+            </div>
+            <div>
+                <p>TOTAL</p>
+                <p>R$ 27,70</p>
+            </div>
+            <button class="confirm-order" onclick="hideFinalPage();">Tudo certo, pode pedir!</button>
+            <button class="cancel-order" onclick="hideFinalPage();">Cancelar</button>
+        </div>
     </div>
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
