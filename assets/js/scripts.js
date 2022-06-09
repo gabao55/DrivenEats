@@ -44,6 +44,7 @@ function setIconToOption(item) {
 
 let finishButton = document.querySelector(".footer button");
 let notFinishedButton = document.querySelector(".footer button p").cloneNode(true);
+let finalPage = document.querySelector(".final-page");
 
 document.addEventListener("click", () => {
     if (document.querySelectorAll(".selected").length == 3) {
@@ -55,3 +56,13 @@ document.addEventListener("click", () => {
         finishButton.replaceChildren(notFinishedButton);
     }
 })
+
+function showFinalPage() {
+    if (document.querySelectorAll(".selected").length == 3) {
+        finalPage.classList.toggle("display-none");
+    }
+}
+
+function hideFinalPage() {
+    finalPage.classList.toggle("display-none");
+}
