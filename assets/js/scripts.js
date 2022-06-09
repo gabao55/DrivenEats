@@ -58,6 +58,8 @@ document.addEventListener("click", () => {
 })
 
 function showFinalPage() {
+    let name = prompt("Por favor, informe seu nome");
+    let address = prompt("Por favor, informe seu endereço");
     if (document.querySelectorAll(".selected").length == 3) {
         finalPage.classList.toggle("display-none");
     }
