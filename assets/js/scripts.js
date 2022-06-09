@@ -41,3 +41,17 @@ function setIconToOption(item) {
     item.classList.add("selected");
     item.appendChild(icon);
 }
+
+let finishButton = document.querySelector(".footer button");
+let notFinishedButton = document.querySelector(".footer button p").cloneNode(true);
+
+document.addEventListener("click", () => {
+    if (document.querySelectorAll(".selected").length == 3) {
+        finishButton.style.backgroundColor = "#32B72F";
+        finishButton.textContent = "Fechar pedido"
+    }
+    else {
+        finishButton.style.backgroundColor = "#CBCBCB";
+        finishButton.replaceChildren(notFinishedButton);
+    }
+})
