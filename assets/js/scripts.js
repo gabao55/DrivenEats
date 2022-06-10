@@ -1,3 +1,6 @@
+let checkedItem;
+let child;
+let icon;
 let finishButton = document.querySelector(".footer button");
 let notFinishedButton = document.querySelector(".footer button p").cloneNode(true);
 let finalPage = document.querySelector(".final-page");
@@ -6,9 +9,15 @@ let totalPriceSum;
 let selectedMainCourse;
 let selectedDrink;
 let selectedDessert;
+let itemsFinalPage;
+let totalPrice;
+let name;
+let address;
+let message;
+let i;
 
 function selectItem(item) {
-    let checkedItem = checkItemSelection(item);
+    checkedItem = checkItemSelection(item);
     if (checkedItem) {
         return true
     }
@@ -31,9 +40,9 @@ function checkItemSelection(item) {
 }
 
 function cleanCarouselSelection(carousel) {
-    let child;
+    child;
 
-    for (let i=0; i < carousel.length; i++) {
+    for (i=0; i < carousel.length; i++) {
         child = carousel[i];
         if (child.classList.contains("selected")) {
             child.classList.remove("selected");
@@ -45,7 +54,7 @@ function cleanCarouselSelection(carousel) {
 }
 
 function setIconToOption(item) {
-    let icon = document.createElement(
+    icon = document.createElement(
         "ion-icon"
     );
     icon.setAttribute("name", "checkmark-circle");
@@ -71,8 +80,8 @@ document.addEventListener("click", () => {
 
 function showFinalPage() {
     if (document.querySelectorAll(".selected").length == 3) {
-        let itemsFinalPage = document.querySelectorAll(".final-page span");
-        let totalPrice = document.querySelectorAll(".final-page p")[1];
+        itemsFinalPage = document.querySelectorAll(".final-page span");
+        totalPrice = document.querySelectorAll(".final-page p")[1];
 
         itemsFinalPage[0].innerText = document.querySelector(".main-course .selected h3").innerText;
         itemsFinalPage[2].innerText = document.querySelector(".drink .selected h3").innerText;
@@ -95,13 +104,13 @@ function showFinalPage() {
 }
 
 function sendToWhatsapp() {
-    let name = prompt("Por favor, informe seu nome");
-    let address = prompt("Por favor, informe seu endereço");
+    name = prompt("Por favor, informe seu nome");
+    address = prompt("Por favor, informe seu endereço");
     selectedMainCourse = document.querySelector(".main-course .selected h3").innerText;
     selectedDrink = document.querySelector(".drink .selected h3").innerHTML;
     selectedDessert = document.querySelector(".dessert .selected h3").innerText;
 
-    let message = `Olá, gostaria de fazer o pedido:\n- Prato: ${selectedMainCourse}\n- Bebida: ${selectedDrink}\n- Sobremesa: ${selectedDessert}\nTotal: R$ ${totalPriceSum}\n\nNome: ${name}\nEndereço: ${address}`;
+    message = `Olá, gostaria de fazer o pedido:\n- Prato: ${selectedMainCourse}\n- Bebida: ${selectedDrink}\n- Sobremesa: ${selectedDessert}\nTotal: R$ ${totalPriceSum}\n\nNome: ${name}\nEndereço: ${address}`;
 
     window.open(`https://wa.me/5511994107417?text=${encodeURIComponent(message)}`, '_blank');
 
