@@ -1,5 +1,4 @@
 let checkedItem;
-let child;
 let icon;
 let finishButton = document.querySelector(".footer button");
 let notFinishedButton = document.querySelector(".footer button p").cloneNode(true);
@@ -22,9 +21,9 @@ function selectItem(item) {
         return true
     }
     
-    cleanCarouselSelection(item.parentElement.querySelectorAll(".option"));
+    cleanCarouselSelection(item.parentElement.querySelector(".selected"));
     
-    setIconToOption(item);
+    setSelectedOption(item);
 
     return true
 }
@@ -39,21 +38,16 @@ function checkItemSelection(item) {
     return false
 }
 
-function cleanCarouselSelection(carousel) {
-    child;
-
-    for (i=0; i < carousel.length; i++) {
-        child = carousel[i];
-        if (child.classList.contains("selected")) {
-            child.classList.remove("selected");
-            child.removeChild(child.querySelector("ion-icon"));
-        }
+function cleanCarouselSelection(selectedItem) {
+    if (selectedItem) {
+        selectedItem.classList.remove("selected");
+        selectedItem.removeChild(selectedItem.querySelector("ion-icon"));
     }
 
     return true;
 }
 
-function setIconToOption(item) {
+function setSelectedOption(item) {
     icon = document.createElement(
         "ion-icon"
     );
