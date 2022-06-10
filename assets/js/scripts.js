@@ -40,6 +40,8 @@ function cleanCarouselSelection(carousel) {
             child.removeChild(child.querySelector("ion-icon"));
         }
     }
+
+    return true;
 }
 
 function setIconToOption(item) {
@@ -96,9 +98,6 @@ function sendToWhatsapp() {
     window.open(`https://wa.me/5511994107417?text=${encodeURIComponent(message)}`, '_blank');
 
     orderSentToWhatsapp();
-
-    // TODO: Implement the functionalities to send message to Whatsapp
-
 }
 
 function orderSentToWhatsapp() {
